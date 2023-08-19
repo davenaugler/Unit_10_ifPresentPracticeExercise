@@ -9,9 +9,15 @@ import java.util.List;
 public class SuspectLocationApp {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
+		List<String> csvFiles = new ArrayList<>();
+		csvFiles.add("InterpolWatchReport-Week1.csv");
+		csvFiles.add("InterpolWatchReport-Week2.csv");
+		csvFiles.add("InterpolWatchReport-Week3.csv");
+		
 		SuspectService suspectService = new SuspectService();
-		List<SuspectLocation> suspectsLocation = suspectService.readThreeFiles("InterpolWatchReport-Week1.csv", "InterpolWatchReport-Week2.csv", "InterpolWatchReport-Week3.csv");
-	
+		
+		List<SuspectLocation> suspectsLocation = suspectService.readThreeFiles(csvFiles);
+//		System.out.println(suspectsLocation);
 		
 //		FileService fileService = new FileService();
 //		String filePath = "InterpolWatchReport-Week1.csv";

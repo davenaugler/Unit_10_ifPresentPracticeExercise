@@ -43,9 +43,15 @@ public class SuspectLocation {
 		this.country = country;
 	}
 
+//	@Override
+//	public String toString() {
+//		return "SuspectLocation [Name: " + name + ", Country: " + country + "]";
+//	}
+	
+	// This toString() is here simply for simplicity on reading the CSV content 
 	@Override
 	public String toString() {
-		return "SuspectLocation [Name: " + name + ", Country: " + country + "]";
+		return name + " " + country;
 	}
 	
 	
