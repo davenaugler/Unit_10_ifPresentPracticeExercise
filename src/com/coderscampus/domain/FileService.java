@@ -10,43 +10,11 @@ import java.util.List;
 
 public class FileService {
 
-//	public List<String> readFiles(String filePaths) throws FileNotFoundException, IOException {
-//		List<String> lines = new ArrayList<>();
-//		boolean skipHeader = true;
-////		int counter = 0;
-//		
-//		try (BufferedReader fileReader = new BufferedReader(new FileReader(filePaths))) {
-//			String line;
-//			while ((line = fileReader.readLine()) != null) {
-//				// Skip .csv header
-//				if(skipHeader) {
-//					skipHeader = false;
-//					continue;
-//				}
-//				lines.add(line);
-//			}
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//		return lines;
-//	}
-
 	public void readFiles(List<String> filePaths) throws FileNotFoundException, IOException {
 		for (String filePath : filePaths) {
 			readSuspectLocationsFromFile(filePath);
 		}
 	}
-
-//	private void skipHeader() {
-//		try(BufferedReader fileReader = new BufferedReader(new FileReader(filePaths))) {
-//			String line;
-//			while ((line = fileReader.readLine()) != null) {
-//	}
-//			
-//		}
-//	}
-
-//	private void readFile(String filePath) throws FileNotFoundException, IOException {
 
 	private List<SuspectLocation> readSuspectLocationsFromFile(String filePath)
 			throws FileNotFoundException, IOException {
@@ -58,20 +26,17 @@ public class FileService {
 				String[] values = line.split(",");
 				SuspectLocation suspect = new SuspectLocation(values[0], values[1]);
 				suspectLocations.add(suspect);
-				
-				
-				
-				
-				
+
 				// Possible 'if' statement here, in order to allow the following to work. MAYBE
 				// NEEDED, MAYBE NOT.
-				
-				// ----- These 3 lines got replaced by the 2 lines above on line 59 and 60 --- // 
+
+				// ----- These 3 lines got replaced by the 2 lines above on line 59 and 60 ---
+				// //
 //				String name = values[0].trim();
 //				String country = values[1].trim();
 //				suspectLocations.add(new SuspectLocation(name, country));
-				// --------------------------------------------------------- // 
-				
+				// --------------------------------------------------------- //
+
 //				for (String value : values) {
 //					System.out.println(value + " ");
 //					System.out.println(value);

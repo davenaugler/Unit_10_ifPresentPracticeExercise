@@ -1,10 +1,13 @@
 // Unit 10 - ifPresent Practice Exercise
 package com.coderscampus.domain;
 
+import java.util.Optional;
+
 public class SuspectLocation {
 
 	private String name;
 	private String country;
+	private Optional<SuspectLocation> nameOpt = Optional.empty();
 
 //	public SuspectLocation(String name, String country) {
 //		this.name = name;
@@ -42,12 +45,22 @@ public class SuspectLocation {
 	public void setCountry(String country) {
 		this.country = country;
 	}
+	
+	public Optional<SuspectLocation> getNameOpt() {
+		return nameOpt;
+	}
+	
+	public void setNameOpt(SuspectLocation name) {
+		this.nameOpt = Optional.of(name);
+	}
+	
 
 //	@Override
 //	public String toString() {
 //		return "SuspectLocation [Name: " + name + ", Country: " + country + "]";
 //	}
 	
+
 	// This toString() is here simply for simplicity on reading the CSV content 
 	@Override
 	public String toString() {
