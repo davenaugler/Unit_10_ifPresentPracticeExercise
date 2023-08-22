@@ -9,32 +9,40 @@ import java.util.List;
 public class SuspectLocationApp {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		List<String> csvFiles = new ArrayList<>();
-		csvFiles.add("InterpolWatchReport-Week1.csv");
-		csvFiles.add("InterpolWatchReport-Week2.csv");
-		csvFiles.add("InterpolWatchReport-Week3.csv");
-		
 		SuspectService suspectService = new SuspectService();
+		suspectService.trackCarmenSandiego();
 		
-		List<SuspectLocation> suspectsLocation = suspectService.readThreeFiles(csvFiles);
-//		System.out.println(suspectsLocation);
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		List<String> csvFiles = new ArrayList<>();
+//		csvFiles.add("InterpolWatchReport-Week1.csv");
+//		csvFiles.add("InterpolWatchReport-Week2.csv");
+//		csvFiles.add("InterpolWatchReport-Week3.csv");
+//		System.out.println(csvFiles);
+
 //		FileService fileService = new FileService();
-//		String filePath = "InterpolWatchReport-Week1.csv";
-//		
-//		List<String> fileContent = fileService.readFile(filePath);
-		
-//		System.out.println("File content:");
-//		List<String> countries = fileContent.stream()
-//											.map(fileContent -> fileContent.get)
-		
-		
-		
-		
-		
-//		for (String line : fileContent) {
-//			System.out.println(line);
+//		SuspectService suspectService = new SuspectService();
+
+//		SuspectService suspectService = new SuspectService();
+//		for (int week = 1; week <= 3; week++) {
+//			List<SuspectLocation> locations = fileService.readFromFile("InterpolWatchReport-Week" + week + ".csv");
+//			suspectService.findCarmenSandiego(locations);
 //		}
+
+//		List<SuspectLocation> suspectsLocations = suspectService.readThreeFiles(csvFiles);
+//		suspectService.findCarmenSandiego(suspectsLocations);
 
 	}
 

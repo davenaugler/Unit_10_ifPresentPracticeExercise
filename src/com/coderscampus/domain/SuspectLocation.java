@@ -1,35 +1,30 @@
 // Unit 10 - ifPresent Practice Exercise
 package com.coderscampus.domain;
 
-import java.util.Optional;
-
 public class SuspectLocation {
+	
+	// Ran into HUGE MISUNDERSTANDING on this exercise
+	// When you are reading a CSV file, make sure your Constructor 
+	// is listing the CSV Column names in order from left to right.
+	// The FileService is utilizing the Constructor and it will interpret 
+	// the CSV Column names from your constructor. 
 
-	private String name;
 	private String country;
-	private Optional<SuspectLocation> nameOpt = Optional.empty();
+	private String name;
 
-//	public SuspectLocation(String name, String country) {
-//		this.name = name;
-//		this.country = country;
-//	}
-	
-	
-	public SuspectLocation(String[] suspectInfo) {
-		this.name = suspectInfo[0];
-		this.country = suspectInfo[1];
+	public SuspectLocation(String name, String country) {
+		this.country = country;
+		this.name = name;
 	}
 
-//	public SuspectLocation(String name2, String country2) {
-//		// TODO Auto-generated constructor stub
-//	}
-
-	// Using this constructor with the FileService for now and ignoring the other one
-	public SuspectLocation(String name, String country) {
-		this.name = name;
+	public String getCountry() {
+		return country;
+	}
+	
+	public void setCountry(String country) {
 		this.country = country;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
@@ -38,22 +33,6 @@ public class SuspectLocation {
 		this.name = name;
 	}
 
-	public String getCountry() {
-		return country;
-	}
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-	
-	public Optional<SuspectLocation> getNameOpt() {
-		return nameOpt;
-	}
-	
-	public void setNameOpt(SuspectLocation name) {
-		this.nameOpt = Optional.of(name);
-	}
-	
 
 //	@Override
 //	public String toString() {
