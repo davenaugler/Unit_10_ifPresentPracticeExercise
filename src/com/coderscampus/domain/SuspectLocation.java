@@ -3,16 +3,12 @@ package com.coderscampus.domain;
 
 public class SuspectLocation {
 	
-	// Ran into HUGE MISUNDERSTANDING on this exercise
-	// When you are reading a CSV file, make sure your Constructor 
-	// is listing the CSV Column names in order from left to right.
-	// The FileService is utilizing the Constructor and it will interpret 
-	// the CSV Column names from your constructor. 
-
 	private String country;
 	private String name;
 
-	public SuspectLocation(String name, String country) {
+	// Remember to build out Constructor exactly how the CSV files have their header written out.
+	// If not, your logic within your FileService won't retrieve the data as you are expecting.
+	public SuspectLocation(String country, String name) {
 		this.country = country;
 		this.name = name;
 	}
@@ -32,7 +28,6 @@ public class SuspectLocation {
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 //	@Override
 //	public String toString() {
